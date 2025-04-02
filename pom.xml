@@ -6,14 +6,14 @@
 
     <groupId>io.confluent</groupId>
     <artifactId>gcp-qwiklabs-sql-automation</artifactId>
-    <packaging>pom</packaging>
-    <version>1.0.0</version>
+    <version>0.0.1-SNAPSHOT</version>
 
     <properties>
-        <maven.compiler.source>19</maven.compiler.source>
-        <maven.compiler.target>19</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <java.version>17</java.version>
+
+        <maven-compiler-plugin.version>3.14.0</maven-compiler-plugin.version>
+
         <avro.version>1.12.0</avro.version>
         <confluent.utils.version>7.9.0</confluent.utils.version>
         <kafka.streams.version>7.8.0-ccs</kafka.streams.version>
@@ -22,6 +22,7 @@
         <lombok.version>1.18.36</lombok.version>
         <log4j.version>2.24.3</log4j.version>
         <spring-boot-maven-plugin.version>3.4.4</spring-boot-maven-plugin.version>
+
     </properties>
 
     <repositories>
@@ -133,6 +134,7 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
+                <version>${maven-compiler-plugin.version}</version>
                 <configuration>
                     <source>1.8</source>
                     <target>1.8</target>
