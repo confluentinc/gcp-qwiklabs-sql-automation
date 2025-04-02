@@ -34,10 +34,16 @@ export SCHEMA_REGISTRY_SECRET="<YOUR_SCHEMA_REGISTRY_API_SECRET>"
 gcloud auth application-default login
 ```
 
-3. Run the following command to build the maven jar
+3. Run the following command to create the JAR file
 
 ```bash
 ./mvnw clean install
+```
+
+4. Run the JAR file
+
+```bash
+java -jar target/gcp-qwiklabs-sql-automation-0.0.1-SNAPSHOT.jar
 ```
 
 This repository is part of the Confluent organization on GitHub.
