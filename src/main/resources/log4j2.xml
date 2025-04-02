@@ -14,7 +14,7 @@
     <Loggers>
         <Root level="INFO" additivity="false">
             <AppenderRef ref="displayMsg" level="INFO"/>
-            <AppenderRef ref="kafkaErrors" level="ERROR"/>
+            <AppenderRef ref="errors" level="ERROR"/>
         </Root>
     </Loggers>
 </Configuration>
