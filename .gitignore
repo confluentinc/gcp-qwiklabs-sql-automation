@@ -29,6 +29,7 @@ release-pom.xml
 # IntelliJ IDEA files
 .idea/
 *.iml
+*.ipr
 *.iws
 
 # VS Code settings
