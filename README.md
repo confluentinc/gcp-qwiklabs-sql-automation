@@ -4,6 +4,12 @@ This repository provide a KStreams application for use with Google Qwiklabs Work
 
 The purpose of the application is to stream SQL queries from a Kafka topic, execute the queries on a BigQuery dataset, and then return the raw results to a Kafka topic.
 
+## Requirements
+
+Participants must have successfully completed Tasks 1-4 of the workshop to run this application.
+
+For this task, access to the Confluent Schema Registry is required. Please create a Schema Registry API Key and Secret before proceeding.
+
 ## Running the Application
 
 1. Clone the Github Repo
