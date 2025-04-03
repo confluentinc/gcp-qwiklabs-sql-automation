@@ -48,7 +48,7 @@ public class BigQueryClient {
         });
 
         // Format the results.
-        return formatResults(result);
+        return formatResults(result, cleanQuery);
     }
 
     public String sanitizeQuery(String query) {
@@ -90,13 +90,13 @@ public class BigQueryClient {
         return errorMessages;
     }
 
-    private static String formatResults(TableResult results) {
+    private static String formatResults(TableResult results, String cleanQuery) {
         String formattedResults;
         if (results.getTotalRows() == 1 ) {
-            formattedResults = results.getTotalRows() + " result. " + results;
+            formattedResults = String.format("%d result for query: %s%n%s", results.getTotalRows(), cleanQuery, results);
             log.info(display, "Returning {} row of results", results.getTotalRows());
         } else {
-            formattedResults = results.getTotalRows() + " results. " + results;
+            formattedResults = String.format("%d results for query: %s%n%s", results.getTotalRows(), cleanQuery, results);
             log.info(display, "Returning {} rows of results", results.getTotalRows());
         }
         return formattedResults;
