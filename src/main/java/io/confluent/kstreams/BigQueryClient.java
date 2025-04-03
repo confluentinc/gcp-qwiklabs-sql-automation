@@ -9,6 +9,7 @@ import com.google.cloud.bigquery.JobInfo;
 import com.google.cloud.bigquery.QueryJobConfiguration;
 import com.google.cloud.bigquery.TableResult;
 import lombok.extern.slf4j.Slf4j;
+import org.json.JSONObject;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -91,14 +92,12 @@ public class BigQueryClient {
     }
 
     private static String formatResults(TableResult results, String cleanQuery) {
-        String formattedResults;
-        if (results.getTotalRows() == 1 ) {
-            formattedResults = String.format("%d result for query: %s%n%s", results.getTotalRows(), cleanQuery, results);
-            log.info(display, "Returning {} row of results", results.getTotalRows());
-        } else {
-            formattedResults = String.format("%d results for query: %s%n%s", results.getTotalRows(), cleanQuery, results);
-            log.info(display, "Returning {} rows of results", results.getTotalRows());
-        }
+        // Format the SQL query and raw TableResult as a JSON string
+        JSONObject queryResults = new JSONObject();
+        queryResults.put("sqlQuery", cleanQuery);
+        queryResults.put("rawResults", results);
+        String formattedResults = queryResults.toString();
+        log.info(display, "Returning results");
         return formattedResults;
     }
 
