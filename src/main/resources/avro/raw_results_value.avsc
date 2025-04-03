@@ -1,0 +1,23 @@
+{
+  "fields": [
+    {
+      "default": null,
+      "name": "text_query",
+      "type": [
+        "null",
+        "string"
+      ]
+    },
+    {
+      "default": null,
+      "name": "result",
+      "type": [
+        "null",
+        "string"
+      ]
+    }
+  ],
+  "name": "raw_results_value",
+  "namespace": "org.apache.flink.avro.generated.record",
+  "type": "record"
+}

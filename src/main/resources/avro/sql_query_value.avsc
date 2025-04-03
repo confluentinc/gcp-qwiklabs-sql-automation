@@ -1,0 +1,31 @@
+{
+  "fields": [
+    {
+      "default": null,
+      "name": "id",
+      "type": [
+        "null",
+        "int"
+      ]
+    },
+    {
+      "default": null,
+      "name": "text_query",
+      "type": [
+        "null",
+        "string"
+      ]
+    },
+    {
+      "default": null,
+      "name": "sql_query",
+      "type": [
+        "null",
+        "string"
+      ]
+    }
+  ],
+  "name": "sql_query_value",
+  "namespace": "org.apache.flink.avro.generated.record",
+  "type": "record"
+}

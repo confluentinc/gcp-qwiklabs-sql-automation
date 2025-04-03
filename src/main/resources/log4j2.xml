@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="INFO">
+    <Appenders>
+        <Console name="displayMsg" target="SYSTEM_OUT">
+            <!--Remove this MarkerFilter to output all messages to the console-->
+            <MarkerFilter marker="DISPLAY" onMatch="ACCEPT" onMismatch="DENY"/>
+            <PatternLayout pattern="%d{HH:mm:ss.SSS} %C{1} %p %m%n"/>
+        </Console>
+        <Console name="errors" target="SYSTEM_ERR">
+            <PatternLayout pattern="%d{HH:mm:ss.SSS} %C{1} %p %m%n"/>
+            <ThresholdFilter level="ERROR" onMatch="ACCEPT" onMismatch="DENY"/>
+        </Console>
+    </Appenders>
+    <Loggers>
+        <Root level="INFO" additivity="false">
+            <AppenderRef ref="displayMsg" level="INFO"/>
+            <AppenderRef ref="errors" level="ERROR"/>
+        </Root>
+    </Loggers>
+</Configuration>
