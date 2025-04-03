@@ -2,6 +2,14 @@
   "fields": [
     {
       "default": null,
+      "name": "id",
+      "type": [
+        "null",
+        "int"
+      ]
+    },
+    {
+      "default": null,
       "name": "text_query",
       "type": [
         "null",
@@ -10,7 +18,7 @@
     },
     {
       "default": null,
-      "name": "result",
+      "name": "query_results",
       "type": [
         "null",
         "string"
