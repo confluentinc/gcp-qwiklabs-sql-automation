@@ -1,0 +1,29 @@
+version: v1.0
+name: build
+agent:
+  machine:
+    type: s1-prod-ubuntu24-04-arm64-1
+auto_cancel:
+  running:
+    when: "branch != 'main'"
+execution_time_limit:
+  minutes: 30
+queue:
+  - when: "branch != 'main'"
+    processing: parallel
+global_job_config:
+  env_vars:
+    - name: MAVEN_OPTS
+      value: "-Dmaven.repo.local=.m2"
+  prologue:
+    commands:
+      - sem-version java 17
+      - checkout
+blocks:
+  - name: "Build"
+    dependencies: []
+    task:
+      jobs:
+        - name: "Clean and Install"
+          commands:
+            - ./mvnw clean install
