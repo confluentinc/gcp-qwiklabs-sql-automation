@@ -16,7 +16,7 @@ semaphore:
       pipeline_file: .semaphore/create-github-tag.yml
       parameters:
         - name: TAG_NAME
-          required: True
+          required: true
           description: The name of the tag to be created.
           default_value: "X.Y.Z"
 make:
