@@ -1,9 +1,25 @@
 name: gcp-qwiklabs-sql-automation
-lang: unknown
-lang_version: unknown
+lang: java
+lang_version: 17
 git:
   enable: true
 codeowners:
   enable: true
 renovatebot:
   enable: false
+semaphore:
+  enable: true
+  pipeline_enable: false
+  tasks:
+    - name: create-github-tag
+      branch: main
+      pipeline_file: .semaphore/create-github-tag.yml
+      parameters:
+        - name: TAG_NAME
+          required: true
+          description: The name of the tag to be created.
+          default_value: "X.Y.Z"
+make:
+  enable: true
+  enable_updates: true
+  update_makefile: true
