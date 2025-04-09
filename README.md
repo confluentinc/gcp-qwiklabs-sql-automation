@@ -6,7 +6,7 @@ The purpose of the application is to stream SQL queries from a Kafka topic, exec
 
 ## Requirements
 
-Participants must have successfully completed Tasks 1-4 of the workshop to run this application.
+Participants must have successfully completed Tasks 1-5 of the workshop to run this application.
 
 For this task, access to the Confluent Schema Registry is required. Please create a Schema Registry API Key and Secret before proceeding.
 
@@ -49,7 +49,7 @@ gcloud auth application-default login
 4. Run the JAR file
 
 ```bash
-java -jar target/gcp-qwiklabs-sql-automation-0.0.1-SNAPSHOT.jar
+java -jar target/gcp-qwiklabs-sql-automation-0.1.0.jar
 ```
 
 This repository is part of the Confluent organization on GitHub.

@@ -6,23 +6,22 @@
 
     <groupId>io.confluent</groupId>
     <artifactId>gcp-qwiklabs-sql-automation</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <version>0.1.0</version>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <java.version>17</java.version>
 
         <maven-compiler-plugin.version>3.14.0</maven-compiler-plugin.version>
+        <spring-boot-maven-plugin.version>3.4.4</spring-boot-maven-plugin.version>
 
         <avro.version>1.12.0</avro.version>
         <confluent.utils.version>7.9.0</confluent.utils.version>
+        <google-cloud-libraries-bom.version>26.55.0</google-cloud-libraries-bom.version>
         <kafka.streams.version>7.8.0-ccs</kafka.streams.version>
         <kafka.version>3.8.0</kafka.version>
         <log4j.version>2.24.3</log4j.version>
         <lombok.version>1.18.36</lombok.version>
-        <log4j.version>2.24.3</log4j.version>
-        <spring-boot-maven-plugin.version>3.4.4</spring-boot-maven-plugin.version>
-
     </properties>
 
     <repositories>
@@ -45,7 +44,7 @@
             <dependency>
                 <groupId>com.google.cloud</groupId>
                 <artifactId>libraries-bom</artifactId>
-                <version>26.55.0</version>
+                <version>${google-cloud-libraries-bom.version}</version>
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
