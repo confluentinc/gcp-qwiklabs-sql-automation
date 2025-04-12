@@ -1,13 +1,3 @@
-### BEGIN HEADERS ###
-# This block is managed by ServiceBot plugin - Make. The content in this block is created using a common
-# template and configurations in service.yml.
-# Modifications in this block will be overwritten by generated content in the nightly run.
-# For more information, please refer to the page:
-# https://confluentinc.atlassian.net/wiki/spaces/Foundations/pages/2871328913/Add+Make
-SERVICE_NAME := gcp-qwiklabs-sql-automation
-SERVICE_DEPLOY_NAME := gcp-qwiklabs-sql-automation
-
-### END HEADERS ###
 ### BEGIN MK-INCLUDE UPDATE ###
 ### This section is managed by service-bot and should not be edited here.
 ### You can make changes upstream in https://github.com/confluentinc/cc-service-bot
@@ -35,7 +25,7 @@ MK_INCLUDE_TIMEOUT_MINS ?= 240
 # If this latest validated release is breaking you, please file a ticket with DevProd describing the issue, and
 # if necessary you can temporarily override MK_INCLUDE_VERSION above the managed section headers until the bad
 # release is yanked.
-MK_INCLUDE_VERSION ?= v0.1337.0
+MK_INCLUDE_VERSION ?= v0.1346.0
 
 # Make sure we always have a copy of the latest cc-mk-include release less than $(MK_INCLUDE_TIMEOUT_MINS) old:
 # Note: The simply-expanded make variable makes sure this is run once per make invocation.
@@ -95,6 +85,16 @@ endif
 .mk-include-check-FORCE:
 	@echo -n ""
 ### END MK-INCLUDE UPDATE ###
+### BEGIN HEADERS ###
+# This block is managed by ServiceBot plugin - Make. The content in this block is created using a common
+# template and configurations in service.yml.
+# Modifications in this block will be overwritten by generated content in the nightly run.
+# For more information, please refer to the page:
+# https://confluentinc.atlassian.net/wiki/spaces/Foundations/pages/2871328913/Add+Make
+SERVICE_NAME := gcp-qwiklabs-sql-automation
+SERVICE_DEPLOY_NAME := gcp-qwiklabs-sql-automation
+
+### END HEADERS ###
 ### BEGIN INCLUDES ###
 # This block is managed by ServiceBot plugin - Make. The content in this block is created using a common
 # template and configurations in service.yml.
