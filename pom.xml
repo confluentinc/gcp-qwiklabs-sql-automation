@@ -16,7 +16,7 @@
         <spring-boot-maven-plugin.version>3.4.4</spring-boot-maven-plugin.version>
 
         <avro.version>1.12.0</avro.version>
-        <confluent.utils.version>7.9.0</confluent.utils.version>
+        <confluent.utils.version>64.7.7.2-2</confluent.utils.version>
         <google-cloud-libraries-bom.version>26.55.0</google-cloud-libraries-bom.version>
         <kafka.streams.version>7.8.0-ccs</kafka.streams.version>
         <kafka.version>3.8.0</kafka.version>
