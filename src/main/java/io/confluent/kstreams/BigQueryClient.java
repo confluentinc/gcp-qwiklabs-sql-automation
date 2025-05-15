@@ -59,7 +59,7 @@ public class BigQueryClient {
     public Job runQueryJob (QueryJobConfiguration queryConfig) {
         // Create a unique job with job ID
         UUID uuid = UUID.randomUUID();
-        String jobName = "qwiklabs_execute_sql_query_" + uuid;
+        String jobName = "execute_sql_query_" + uuid;
         JobId jobId = JobId.newBuilder().setProject(PROJECT_ID).setJob(jobName).build();
         Job queryJob = bigquery.create(JobInfo.newBuilder(queryConfig).setJobId(jobId).build());
         log.info(display, "Built query job with ID: {}", jobId.toString());

@@ -25,8 +25,8 @@ import java.util.Properties;
 @Slf4j
 public class ExecuteQuery {
     // Get required env variables.
-    static final String PROJECT_ID = System.getenv("GCP_PROJECT_ID");
-    static final String DATASET = Optional.ofNullable(System.getenv("GCP_DATASET_ID")).orElse("qwiklabs");
+    static final String PROJECT_ID = System.getenv("GOOGLE_CLOUD_PROJECT_ID");
+    static final String DATASET = Optional.ofNullable(System.getenv("BIGQUERY_DATASET_ID")).orElse("stocks");
     static final String QUERY_TOPIC =  Optional.ofNullable(System.getenv("QUERY_TOPIC")).orElse("sql_query");
     static final String RESULTS_TOPIC = Optional.ofNullable(System.getenv("RESULTS_TOPIC")).orElse("raw_results");
     static final String BOOTSTRAP_SERVER = System.getenv("BOOTSTRAP_SERVER");
@@ -78,8 +78,8 @@ public class ExecuteQuery {
         Map<String, String> envVars = new HashMap<>();
         List<String> varsNotSet = new ArrayList<>();
 
-        envVars.put("GCP_PROJECT_ID", PROJECT_ID);
-        envVars.put("GCP_DATASET_ID", DATASET);
+        envVars.put("GOOGLE_CLOUD_PROJECT_ID", PROJECT_ID);
+        envVars.put("BIGQUERY_DATASET_ID", DATASET);
         envVars.put("QUERY_TOPIC", QUERY_TOPIC);
         envVars.put("RESULTS_TOPIC", RESULTS_TOPIC);
         envVars.put("BOOTSTRAP_SERVER", BOOTSTRAP_SERVER);
@@ -112,8 +112,8 @@ public class ExecuteQuery {
         final Properties streamsConfiguration = new Properties();
 
         // A unique identifier for the stream processing application.
-        streamsConfiguration.put(StreamsConfig.APPLICATION_ID_CONFIG, "gcp-qwiklabs-sql-automation" + PROJECT_ID);
-        streamsConfiguration.put(StreamsConfig.CLIENT_ID_CONFIG, "pie_labs|gcp-qwiklabs-sql-automation|" + PROJECT_ID);
+        streamsConfiguration.put(StreamsConfig.APPLICATION_ID_CONFIG, "google-cloud-lab-sql-automation" + PROJECT_ID);
+        streamsConfiguration.put(StreamsConfig.CLIENT_ID_CONFIG, "pie_labs|google-cloud-lab-sql-automation|" + PROJECT_ID);
         // A list of host/port pairs used to establish the initial connection to the Kafka cluster.
         streamsConfiguration.put(StreamsConfig.BOOTSTRAP_SERVERS_CONFIG, BOOTSTRAP_SERVER);
 
