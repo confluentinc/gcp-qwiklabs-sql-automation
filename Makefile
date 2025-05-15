@@ -4,8 +4,8 @@
 # Modifications in this block will be overwritten by generated content in the nightly run.
 # For more information, please refer to the page:
 # https://confluentinc.atlassian.net/wiki/spaces/Foundations/pages/2871328913/Add+Make
-SERVICE_NAME := gcp-qwiklabs-sql-automation
-SERVICE_DEPLOY_NAME := gcp-qwiklabs-sql-automation
+SERVICE_NAME := google-cloud-lab-sql-automation
+SERVICE_DEPLOY_NAME := google-cloud-lab-sql-automation
 
 ### END HEADERS ###
 ### BEGIN MK-INCLUDE UPDATE ###

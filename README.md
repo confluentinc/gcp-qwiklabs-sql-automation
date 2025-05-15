@@ -1,4 +1,4 @@
-# Google Cloud Sql Automation Kafka Streams App
+# Google Cloud SQL Automation Kafka Streams App
 
 This repository provide a KStreams application for use with the Google Cloud Lab: **SQL Automation and Real-Time Data Streaming with Confluent and Vertex AI**.
 
@@ -6,7 +6,7 @@ The purpose of the application is to stream SQL queries from a Kafka topic, exec
 
 ## Requirements
 
-Participants must have successfully completed Tasks 1-5 of the workshop to run this application.
+Participants must have successfully completed Tasks 1-5 of the lab to run this application.
 
 For this task, access to the Confluent Schema Registry is required. Please create a Schema Registry API Key and Secret before proceeding.
 
@@ -15,11 +15,11 @@ For this task, access to the Confluent Schema Registry is required. Please creat
 1. Clone the Github Repo
 
 ```bash
-git clone https://github.com/confluentinc/gcp-qwiklabs-sql-automation.git
+git clone https://github.com/confluentinc/google-cloud-lab-sql-automation.git
 ```
 
 ```bash
-cd gcp-qwiklabs-sql-automation
+cd google-cloud-lab-sql-automation
 ```
 
 2. Set the following environment variables for Google Cloud and Confluent Cloud:
@@ -49,7 +49,7 @@ gcloud auth application-default login
 4. Run the JAR file
 
 ```bash
-java -jar target/gcp-qwiklabs-sql-automation-0.1.0.jar
+java -jar target/google-cloud-lab-sql-automation-0.1.0.jar
 ```
 
 This repository is part of the Confluent organization on GitHub.
