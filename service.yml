@@ -1,4 +1,4 @@
-name: gcp-qwiklabs-sql-automation
+name: google-cloud-lab-sql-automation
 lang: java
 lang_version: 17
 git:

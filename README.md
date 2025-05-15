@@ -1,12 +1,12 @@
-# GCP Qwiklabs Sql Automation Kafka Streams App
+# Google Cloud SQL Automation Kafka Streams App
 
-This repository provide a KStreams application for use with Google Qwiklabs Workshop: **AI-Powered SQL Automation & Real-Time Data Streaming with Confluent and Google Cloud.**
+This repository provide a KStreams application for use with the Google Cloud Lab: **SQL Automation and Real-Time Data Streaming with Confluent and Vertex AI**.
 
 The purpose of the application is to stream SQL queries from a Kafka topic, execute the queries on a BigQuery dataset, and then return the raw results to a Kafka topic.
 
 ## Requirements
 
-Participants must have successfully completed Tasks 1-5 of the workshop to run this application.
+Participants must have successfully completed Tasks 1-5 of the lab to run this application.
 
 For this task, access to the Confluent Schema Registry is required. Please create a Schema Registry API Key and Secret before proceeding.
 
@@ -15,17 +15,17 @@ For this task, access to the Confluent Schema Registry is required. Please creat
 1. Clone the Github Repo
 
 ```bash
-git clone https://github.com/confluentinc/gcp-qwiklabs-sql-automation.git
+git clone https://github.com/confluentinc/google-cloud-lab-sql-automation.git
 ```
 
 ```bash
-cd gcp-qwiklabs-sql-automation
+cd google-cloud-lab-sql-automation
 ```
 
-2. Set the following environment variables for Google and Confluent Cloud:
+2. Set the following environment variables for Google Cloud and Confluent Cloud:
 
 ```bash
-export GCP_PROJECT_ID="<YOUR_GCP_PROJECT_ID>"
+export GOOGLE_CLOUD_PROJECT_ID="<YOUR_GOOGLE_CLOUD_PROJECT_ID>"
 export KAFKA_API_KEY="<YOUR_KAFKA_API_KEY>"
 export KAFKA_API_SECRET="<YOUR_KAFKA_API_SECRET>"
 export BOOTSTRAP_SERVER="<YOUR_BOOTSTRAP_SERVER>"
@@ -49,7 +49,7 @@ gcloud auth application-default login
 4. Run the JAR file
 
 ```bash
-java -jar target/gcp-qwiklabs-sql-automation-0.1.0.jar
+java -jar target/google-cloud-lab-sql-automation-0.1.0.jar
 ```
 
 This repository is part of the Confluent organization on GitHub.
