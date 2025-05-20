@@ -13,15 +13,15 @@
         <java.version>17</java.version>
 
         <maven-compiler-plugin.version>3.14.0</maven-compiler-plugin.version>
-        <spring-boot-maven-plugin.version>3.4.4</spring-boot-maven-plugin.version>
+        <spring-boot-maven-plugin.version>3.4.5</spring-boot-maven-plugin.version>
 
         <avro.version>1.12.0</avro.version>
-        <confluent.utils.version>7.9.0</confluent.utils.version>
-        <google-cloud-libraries-bom.version>26.55.0</google-cloud-libraries-bom.version>
+        <confluent.utils.version>7.9.1-176</confluent.utils.version>
+        <google-cloud-libraries-bom.version>26.59.0</google-cloud-libraries-bom.version>
         <kafka.streams.version>7.8.0-ccs</kafka.streams.version>
-        <kafka.version>3.8.0</kafka.version>
+        <kafka.version>3.9.0</kafka.version>
         <log4j.version>2.24.3</log4j.version>
-        <lombok.version>1.18.36</lombok.version>
+        <lombok.version>1.18.38</lombok.version>
     </properties>
 
     <repositories>
