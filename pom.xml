@@ -19,7 +19,7 @@
         <confluent.utils.version>7.9.0</confluent.utils.version>
         <google-cloud-libraries-bom.version>26.55.0</google-cloud-libraries-bom.version>
         <kafka.streams.version>7.8.0-ccs</kafka.streams.version>
-        <kafka.version>3.8.0</kafka.version>
+        <kafka.version>7.9.0-ce</kafka.version>
         <log4j.version>2.24.3</log4j.version>
         <lombok.version>1.18.36</lombok.version>
     </properties>
